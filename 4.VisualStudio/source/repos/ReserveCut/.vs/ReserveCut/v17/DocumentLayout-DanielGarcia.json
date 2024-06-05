@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|c:\\users\\daniel\\onedrive\\#d@niel#\\#_heg\\semestre_4\\62-41_architecture\\projet_reservecut\\4.visualstudio\\source\\repos\\reservecut\\frmreservecut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|solutionrelative:frmreservecut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|c:\\users\\daniel\\onedrive\\#d@niel#\\#_heg\\semestre_4\\62-41_architecture\\projet_reservecut\\4.visualstudio\\source\\repos\\reservecut\\frmreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|solutionrelative:frmreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|c:\\users\\daniel\\onedrive\\#d@niel#\\#_heg\\semestre_4\\62-41_architecture\\projet_reservecut\\4.visualstudio\\source\\repos\\reservecut\\frmnewreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|solutionrelative:frmnewreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|c:\\users\\daniel\\onedrive\\#d@niel#\\#_heg\\semestre_4\\62-41_architecture\\projet_reservecut\\4.visualstudio\\source\\repos\\reservecut\\classes\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|solutionrelative:classes\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmReservation.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmReservation.cs",
+              "RelativeDocumentMoniker": "FrmReservation.cs",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmReservation.cs",
+              "RelativeToolTip": "FrmReservation.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwDsAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T01:28:52.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmReserveCut.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmReserveCut.cs",
+              "RelativeDocumentMoniker": "FrmReserveCut.cs",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmReserveCut.cs",
+              "RelativeToolTip": "FrmReserveCut.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowDkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T01:26:18.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmNewReservation.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmNewReservation.cs",
+              "RelativeDocumentMoniker": "FrmNewReservation.cs",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmNewReservation.cs",
+              "RelativeToolTip": "FrmNewReservation.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAwwC0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T01:24:26.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Request.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\Classes\\Request.cs",
+              "RelativeDocumentMoniker": "Classes\\Request.cs",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\Classes\\Request.cs",
+              "RelativeToolTip": "Classes\\Request.cs",
+              "ViewState": "AQIAALkAAAAAAAAAAAAAwI8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T23:51:25.606Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+User Admin
+---------------
+username : adm1
+password : 1
+
+
+User Standard
+---------------
+username : usr1
+password : 1

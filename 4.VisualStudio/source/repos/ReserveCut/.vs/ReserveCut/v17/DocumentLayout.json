@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|c:\\users\\daniel\\onedrive\\#d@niel#\\#_heg\\semestre_4\\62-41_architecture\\projet_reservecut\\4.visualstudio\\source\\repos\\reservecut\\frmdeleteconfirmationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|solutionrelative:frmdeleteconfirmationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|c:\\users\\daniel\\onedrive\\#d@niel#\\#_heg\\semestre_4\\62-41_architecture\\projet_reservecut\\4.visualstudio\\source\\repos\\reservecut\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|solutionrelative:frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|c:\\users\\daniel\\onedrive\\#d@niel#\\#_heg\\semestre_4\\62-41_architecture\\projet_reservecut\\4.visualstudio\\source\\repos\\reservecut\\frmreservecut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|solutionrelative:frmreservecut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|c:\\users\\daniel\\onedrive\\#d@niel#\\#_heg\\semestre_4\\62-41_architecture\\projet_reservecut\\4.visualstudio\\source\\repos\\reservecut\\classes\\localstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|solutionrelative:classes\\localstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|c:\\users\\daniel\\onedrive\\#d@niel#\\#_heg\\semestre_4\\62-41_architecture\\projet_reservecut\\4.visualstudio\\source\\repos\\reservecut\\frmreservecut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|solutionrelative:frmreservecut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|c:\\users\\daniel\\onedrive\\#d@niel#\\#_heg\\semestre_4\\62-41_architecture\\projet_reservecut\\4.visualstudio\\source\\repos\\reservecut\\classes\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95583AA1-BDC2-48D4-A14E-583F98058890}|ReserveCut.csproj|solutionrelative:classes\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmDeleteConfirmationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmDeleteConfirmationRequest.cs",
+              "RelativeDocumentMoniker": "FrmDeleteConfirmationRequest.cs",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmDeleteConfirmationRequest.cs",
+              "RelativeToolTip": "FrmDeleteConfirmationRequest.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAIAxwCcAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T22:34:59.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmUsers.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmUsers.cs",
+              "RelativeDocumentMoniker": "FrmUsers.cs",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmUsers.cs",
+              "RelativeToolTip": "FrmUsers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T22:34:46.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmReserveCut.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmReserveCut.cs",
+              "RelativeDocumentMoniker": "FrmReserveCut.cs",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmReserveCut.cs [Design]",
+              "RelativeToolTip": "FrmReserveCut.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T22:32:47.599Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LocalStorage.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\Classes\\LocalStorage.cs",
+              "RelativeDocumentMoniker": "Classes\\LocalStorage.cs",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\Classes\\LocalStorage.cs",
+              "RelativeToolTip": "Classes\\LocalStorage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T22:21:59.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\Classes\\Customer.cs",
+              "RelativeDocumentMoniker": "Classes\\Customer.cs",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\Classes\\Customer.cs",
+              "RelativeToolTip": "Classes\\Customer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T22:18:02.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmReserveCut.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmReserveCut.cs",
+              "RelativeDocumentMoniker": "FrmReserveCut.cs",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\FrmReserveCut.cs",
+              "RelativeToolTip": "FrmReserveCut.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowDoAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T21:58:59.029Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

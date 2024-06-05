@@ -1,0 +1,17 @@
+Table d'entité:
+php artisan make:model xxx --migration --factory
+xxx = nom du model - 1er lettre majuscule
+		   - singulier
+                   - en anglais
+
+Tables de relation:
+php artisan make:migration create_xxx_yyy_table
+xxx = 1er table à laquelle c'est lié
+yyy = 2eme table à laquelle c'est lié
+! Dans l'ordre alphabétique au singulier
+ex. creat_customer_product_table
+
+
+1-n = hasMany
+n-1 = belongsTo
+n-n = belongsToMany

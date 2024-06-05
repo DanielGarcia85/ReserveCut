@@ -1,0 +1,3801 @@
+{
+	"info": {
+		"_postman_id": "97a0292f-ec61-47e3-8641-8afca20b9b5c",
+		"name": "ReserveCut",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33460660"
+	},
+	"item": [
+		{
+			"name": "401 : Unauhtenticate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Login with default admin User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Vérifiez que la réponse est bien en format JSON",
+							"if (pm.response.headers.get('Content-Type').includes('application/json')) {",
+							"    // Parsez la réponse JSON",
+							"    let responseData = pm.response.json();",
+							"    // Obtenez le jeton de la propriété 'token' de la réponse JSON",
+							"    let token = responseData.token;",
+							"    // Stockez le jeton dans une variable d'environnement nommée 'authToken'",
+							"    pm.environment.set(\"authToken\", token);",
+							"} else {",
+							"    console.log('Response is not in JSON format');",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Index Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Index Stylist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stylists",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stylists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Index Absence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/absences",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"absences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Index Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Index Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Show Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Show Stylist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stylists/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stylists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Show Absence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/absences/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"absences",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Show Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/customers/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Show Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Tourbillons",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is a comment.",
+							"type": "text"
+						},
+						{
+							"key": "long_short",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cutting_time",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef03373-a3bd-48e0-a58a-5f0c1444e1cb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Stylist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Garcia",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef03373-a3bd-48e0-a58a-5f0c1444e1cb"
+						},
+						{
+							"key": "haircut_ids",
+							"value": "1,2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stylists",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stylists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Absence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "stylist_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "date_begin",
+							"value": "2024/06/02",
+							"type": "text"
+						},
+						{
+							"key": "date_end",
+							"value": "2024/08/02",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/absences",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"absences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Garcia",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Avenue des champs 88",
+							"type": "text"
+						},
+						{
+							"key": "postcode",
+							"value": "1293",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Genève",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+41788888888",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "date_birth",
+							"value": "1995/02/27",
+							"type": "text"
+						},
+						{
+							"key": "haircut_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "pref_contact",
+							"value": "tel",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef03373-a3bd-48e0-a58a-5f0c1444e1cb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customer_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "stylist_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "date_begin",
+							"value": "2023/01/01 12:00",
+							"type": "text"
+						},
+						{
+							"key": "date_end",
+							"value": "2023/01/01 13:00",
+							"type": "text"
+						},
+						{
+							"key": "comments",
+							"value": "This is a comment.",
+							"type": "text"
+						},
+						{
+							"key": "beard_y_n",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "shampoo_y_n",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Update Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/11?name=Modified&description=This is a modified description.&long_short=1&cutting_time=30&price=25",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"11"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Modified"
+						},
+						{
+							"key": "description",
+							"value": "This is a modified description."
+						},
+						{
+							"key": "long_short",
+							"value": "1"
+						},
+						{
+							"key": "cutting_time",
+							"value": "30"
+						},
+						{
+							"key": "price",
+							"value": "25"
+						},
+						{
+							"key": "photo",
+							"value": "Modified",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Update Stylist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stylists/11?name=Modified&firstname=Modified&haircut_ids=1&absence_ids=11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stylists",
+						"11"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Modified"
+						},
+						{
+							"key": "firstname",
+							"value": "Modified"
+						},
+						{
+							"key": "photo",
+							"value": "Modified",
+							"disabled": true
+						},
+						{
+							"key": "haircut_ids",
+							"value": "1"
+						},
+						{
+							"key": "absence_ids",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Update Absence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/absences/11?stylist_id=11&date_begin=2024/06/23&date_end=2024/06/29",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"absences",
+						"11"
+					],
+					"query": [
+						{
+							"key": "stylist_id",
+							"value": "11"
+						},
+						{
+							"key": "date_begin",
+							"value": "2024/06/23"
+						},
+						{
+							"key": "date_end",
+							"value": "2024/06/29"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Update Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/customers/11?name=Modified&firstname=Modified&phone=+41788888888",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customers",
+						"11"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Modified"
+						},
+						{
+							"key": "firstname",
+							"value": "Modified"
+						},
+						{
+							"key": "address",
+							"value": "Modified",
+							"disabled": true
+						},
+						{
+							"key": "postcode",
+							"value": "8888",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "Modified",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "+41788888888"
+						},
+						{
+							"key": "email",
+							"value": "Modified@modifi.ed",
+							"disabled": true
+						},
+						{
+							"key": "date_birth",
+							"value": "1111/11/11",
+							"disabled": true
+						},
+						{
+							"key": "photo",
+							"value": "Modified",
+							"disabled": true
+						},
+						{
+							"key": "haircut_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pref_contact",
+							"value": "Phone",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Update Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/11?customer_id=1&stylist_id=2&date_begin=2025/06/25 12:00&date_end=2025/06/25 13:00&comments=This is a modified comment.&beard_y_n=0&shampoo_y_n=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						"11"
+					],
+					"query": [
+						{
+							"key": "customer_id",
+							"value": "1"
+						},
+						{
+							"key": "stylist_id",
+							"value": "2"
+						},
+						{
+							"key": "date_begin",
+							"value": "2025/06/25 12:00"
+						},
+						{
+							"key": "date_end",
+							"value": "2025/06/25 13:00"
+						},
+						{
+							"key": "comments",
+							"value": "This is a modified comment."
+						},
+						{
+							"key": "beard_y_n",
+							"value": "0"
+						},
+						{
+							"key": "shampoo_y_n",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Destroy Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Destroy Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/customers/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customers",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Destroy Absence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/absences/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"absences",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Destroy Stylist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stylists/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stylists",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Destroy Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store User | Role : admin (danidan)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Garcia",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "danidan",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Login with User danidan",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Vérifiez que la réponse est bien en format JSON",
+							"if (pm.response.headers.get('Content-Type').includes('application/json')) {",
+							"    // Parsez la réponse JSON",
+							"    let responseData = pm.response.json();",
+							"    // Obtenez le jeton de la propriété 'token' de la réponse JSON",
+							"    let token = responseData.token;",
+							"    // Stockez le jeton dans une variable d'environnement nommée 'authToken'",
+							"    pm.environment.set(\"authToken\", token);",
+							"} else {",
+							"    console.log('Response is not in JSON format');",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "danidan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Index Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Show Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Tourbillon2",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is a comment.",
+							"type": "text"
+						},
+						{
+							"key": "long_short",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cutting_time",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef03373-a3bd-48e0-a58a-5f0c1444e1cb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Update Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/12?name=Modified2&description=This is a modified description.&long_short=1&cutting_time=30&price=25",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"12"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Modified2"
+						},
+						{
+							"key": "description",
+							"value": "This is a modified description."
+						},
+						{
+							"key": "long_short",
+							"value": "1"
+						},
+						{
+							"key": "cutting_time",
+							"value": "30"
+						},
+						{
+							"key": "price",
+							"value": "25"
+						},
+						{
+							"key": "photo",
+							"value": "Modified",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Destroy Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Index User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Show User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Garcia2",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel2",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "danidan2",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/3?name=Garcia2&firstname=Daniel2&username=danidan2&role=user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Garcia2"
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel2"
+						},
+						{
+							"key": "username",
+							"value": "danidan2"
+						},
+						{
+							"key": "role",
+							"value": "user"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Destroy User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Update User danidan | Role : user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/2?name=Garcia&firstname=Daniel&username=danidan&role=user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Garcia"
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel"
+						},
+						{
+							"key": "username",
+							"value": "danidan"
+						},
+						{
+							"key": "role",
+							"value": "user"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Index Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Show Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customer_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "stylist_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "date_begin",
+							"value": "2023/01/01 12:00",
+							"type": "text"
+						},
+						{
+							"key": "date_end",
+							"value": "2023/01/01 13:00",
+							"type": "text"
+						},
+						{
+							"key": "comments",
+							"value": "This is a comment.",
+							"type": "text"
+						},
+						{
+							"key": "beard_y_n",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "shampoo_y_n",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Update Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/12?customer_id=1&stylist_id=2&date_begin=2025/06/25 12:00&date_end=2025/06/25 13:00&comments=This is a modified comment.&beard_y_n=0&shampoo_y_n=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						"12"
+					],
+					"query": [
+						{
+							"key": "customer_id",
+							"value": "1"
+						},
+						{
+							"key": "stylist_id",
+							"value": "2"
+						},
+						{
+							"key": "date_begin",
+							"value": "2025/06/25 12:00"
+						},
+						{
+							"key": "date_end",
+							"value": "2025/06/25 13:00"
+						},
+						{
+							"key": "comments",
+							"value": "This is a modified comment."
+						},
+						{
+							"key": "beard_y_n",
+							"value": "0"
+						},
+						{
+							"key": "shampoo_y_n",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Destroy Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Index Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Show Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "403 : Store Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Tourbillon3",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is a comment.",
+							"type": "text"
+						},
+						{
+							"key": "long_short",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cutting_time",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef03373-a3bd-48e0-a58a-5f0c1444e1cb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "403 : Update Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/13?name=Modified3&description=This is a modified description.&long_short=1&cutting_time=30&price=25",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"13"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Modified3"
+						},
+						{
+							"key": "description",
+							"value": "This is a modified description."
+						},
+						{
+							"key": "long_short",
+							"value": "1"
+						},
+						{
+							"key": "cutting_time",
+							"value": "30"
+						},
+						{
+							"key": "price",
+							"value": "25"
+						},
+						{
+							"key": "photo",
+							"value": "Modified",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "403 : Destroy Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/13",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "403 : Index User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "403 : Show User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "403 : Store User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Garcia2",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel2",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "danidan2",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "403 : Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/3?name=Garcia3&firstname=Daniel3&username=danidan3&role=user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Garcia3"
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel3"
+						},
+						{
+							"key": "username",
+							"value": "danidan3"
+						},
+						{
+							"key": "role",
+							"value": "user"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "403 : Destroy User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Login with default admin User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Vérifiez que la réponse est bien en format JSON",
+							"if (pm.response.headers.get('Content-Type').includes('application/json')) {",
+							"    // Parsez la réponse JSON",
+							"    let responseData = pm.response.json();",
+							"    // Obtenez le jeton de la propriété 'token' de la réponse JSON",
+							"    let token = responseData.token;",
+							"    // Stockez le jeton dans une variable d'environnement nommée 'authToken'",
+							"    pm.environment.set(\"authToken\", token);",
+							"} else {",
+							"    console.log('Response is not in JSON format');",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customer_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "stylist_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "date_begin",
+							"value": "2023/01/01 12:00",
+							"type": "text"
+						},
+						{
+							"key": "date_end",
+							"value": "2023/01/01 13:00",
+							"type": "text"
+						},
+						{
+							"key": "comments",
+							"value": "This is a comment.",
+							"type": "text"
+						},
+						{
+							"key": "beard_y_n",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "shampoo_y_n",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Haircut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Tourbillon",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is a comment.",
+							"type": "text"
+						},
+						{
+							"key": "long_short",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cutting_time",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef03373-a3bd-48e0-a58a-5f0c1444e1cb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Stylist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Garcia",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef03373-a3bd-48e0-a58a-5f0c1444e1cb"
+						},
+						{
+							"key": "haircut_ids",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stylists",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stylists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Garcia",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Avenue des champs 88",
+							"type": "text"
+						},
+						{
+							"key": "postcode",
+							"value": "1293",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Genève",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+41788888888",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "date_birth",
+							"value": "1995/02/27",
+							"type": "text"
+						},
+						{
+							"key": "haircut_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "pref_contact",
+							"value": "tel",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef03373-a3bd-48e0-a58a-5f0c1444e1cb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "200 : Store Absence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "stylist_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "date_begin",
+							"value": "2024/06/02",
+							"type": "text"
+						},
+						{
+							"key": "date_end",
+							"value": "2024/08/02",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/absences",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"absences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 : Absence - Not Found",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/absences/99",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"absences",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "422 : Absence - Validator Failed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "stylist_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "date_begin",
+							"value": "2024/06/02",
+							"type": "text"
+						},
+						{
+							"key": "date_end",
+							"value": "2024/05/02",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/absences/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"absences",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 : Customer - Not Found",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/customers/99",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customers",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "422 : Customer - Validator Failed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Garcia",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "Avenue des champs 8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888",
+							"type": "text"
+						},
+						{
+							"key": "postcode",
+							"value": "9999999999999",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Genèveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+417888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a@gmail.commmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+							"type": "text"
+						},
+						{
+							"key": "date_birth",
+							"value": "1995/02/27777",
+							"type": "text"
+						},
+						{
+							"key": "haircut_id",
+							"value": "99",
+							"type": "text"
+						},
+						{
+							"key": "pref_contact",
+							"value": "faux",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "422 : Customer - Destroy Failed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/customers/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 : Haircut - Not Found",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/99",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "422 : Haircut - Validator Failed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Tourbillon",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is a commenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttcommenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttThis is a commenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttcommenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttThis is a commenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttcommenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttThis is a commenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttcommenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttThis is a commenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttcommentttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt",
+							"type": "text"
+						},
+						{
+							"key": "long_short",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "cutting_time",
+							"value": "150",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "we",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef03373-a3bd-48e0-a58a-5f0c1444e1cb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "422 : Haircut - Destroy Failed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/haircuts/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"haircuts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 : Reservation - Not Found",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/99",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "422 : Reservation - Validator Failed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customer_id",
+							"value": "99",
+							"type": "text"
+						},
+						{
+							"key": "stylist_id",
+							"value": "99",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "date_begin",
+							"value": "2023/01/01 12:00",
+							"type": "text"
+						},
+						{
+							"key": "date_end",
+							"value": "2023/01/01 11:00",
+							"type": "text"
+						},
+						{
+							"key": "comments",
+							"value": "This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.This is a comment.",
+							"type": "text"
+						},
+						{
+							"key": "beard_y_n",
+							"value": "we",
+							"type": "text"
+						},
+						{
+							"key": "shampoo_y_n",
+							"value": "we",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 : Stylist - Not Found",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stylists/99",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stylists",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "422 : Stylist - Validator Failed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Garcia",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef03373-a3bd-48e0-a58a-5f0c1444e1cb"
+						},
+						{
+							"key": "haircut_ids",
+							"value": "18",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stylists",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stylists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "422 : Stylist - Destroy Failed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stylists/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stylists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 : User - Not Found",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/99",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "422 : User - Validator Failed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Garcia",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "firstname",
+							"value": "Daniel",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "danidan",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "adminininiini",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789123456789123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
