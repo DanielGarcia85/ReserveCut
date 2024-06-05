@@ -15,6 +15,10 @@ if %errorLevel% == 0 (
 :: Change le répertoire
 cd /d C:\Users\Daniel\OneDrive\#D@niel#\#_HEG\Semestre_4\62-41_Architecture\Projet_ReserveCut
 
+:: Initialisation de Git LFS
+git lfs install
+git lfs track "*.mp4"
+
 :: Vérifie si un message de commit est passé en argument; sinon, demande à l'utilisateur de le saisir
 if "%~1"=="" (
     echo Veuillez entrer un message de commit:
@@ -29,9 +33,12 @@ if "%~1"=="" (
 )
 
 :: Exécute les commandes git
-git add *
+git add .gitattributes
+git add .
 git commit -m "!commitMessage!"
-git push
+
+:: Pousser les modifications et configurer l'upstream
+git push --set-upstream origin master
 
 echo Les commandes Git ont été exécutées.
 pause
