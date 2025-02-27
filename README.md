@@ -64,3 +64,34 @@ Before starting, ensure you have installed:
 
 ### Frontend (Visual Studio)
 
+1. Open the project:
+   - Launch **Visual Studio**.
+   - Open the solution file located in *4.VisualStudio\source\repos\ReserveCut\ReserveCut.sln*.
+3. Restore NuGet packages:
+   - Right-click on the solution in **Solution Explorer**.
+   - Select *Restore NuGet Packages*.
+5. Configure backend connection:
+   - Open the appropriate configuration file.
+   - Ensure the API URL points to the Laravel backend.
+7. Run the application
+   - Click *Start* or press F5.
+
+### Project Status
+- **Backend Laravel** : 100% completed
+- **Frontend Visual Studio** : 70 completed. Some features are still unde development. The UI is completly finished.
+
+### Usage
+
+Since the project is not yet fully completed, there is currently no standalone executable file (.exe, .dmg, etc.). To test the application, launch the frontend directly from Visual Studio in debug mode, allowing it to interact with the running Laravel backend.
+
+### Useful Resources
+
+- Laravel Documentation: [Download here](https://laravel.com/docs/8.x)
+- Visual Studio Documentation: [Download here](https://docs.microsoft.com/en-us/visualstudio/)
+- .NET Framework Documentation: [Download here](https://docs.microsoft.com/en-us/dotnet/framework/)
+
+### Author
+Project created by Daniel Garcia as part of the 62-41 Architecture course at Haute École de Gestion (HEG) during the Spring semester of 2024.
+
+
+
