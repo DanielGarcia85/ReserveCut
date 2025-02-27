@@ -1,6 +1,6 @@
 # ReserveCut
 
-**ReserveCut** is a reservation and management application designed for hair salons, developed as part of the *62-41 Architecture* course at **Haute École de Gestion (HEG)**. This project combines a robust **PHP** backend built with **Laravel** and an interactive **C#** frontend developed in **Visual Studio**.
+**ReserveCut** is a reservation and management application designed for hair salons and barbershops, developed as part of the *62-41 Architecture* course at **Haute École de Gestion (HEG)**. This project combines a robust **PHP** backend built with **Laravel** and an interactive **C#** frontend developed in **Visual Studio**.
 
 ## Features
 
