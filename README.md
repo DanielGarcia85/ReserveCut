@@ -78,7 +78,7 @@ Before starting, ensure you have installed:
 
 ### Project Status
 - **Backend Laravel** : 100% completed
-- **Frontend Visual Studio** : 70 completed. Some features are still unde development. The UI is completly finished.
+- **Frontend Visual Studio** : 70% completed. Some features are still unde development. The UI is completly finished.
 
 ### Usage
 
