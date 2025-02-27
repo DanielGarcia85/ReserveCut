@@ -27,10 +27,22 @@ Before starting, ensure you have installed:
 - **PHP 8.2 or later**: [Download here](https://www.php.net/downloads)
 - **Composer**: [Download here](https://getcomposer.org/download/)
 - **Laravel 8.x**: [Installation guide](https://laravel.com/docs/8.x/installation)
+- **MySQL 10.4 (MariaDB recommended)**: [Download here](https://dev.mysql.com/downloads/)
 - **Visual Studio 2022**: [Download here](https://visualstudio.microsoft.com/downloads/)
 - **.NET Framework 7.0.102 or later**: [Download here](https://dotnet.microsoft.com/download/dotnet-framework)
 
 ## Installation
+
+### Database Setup (MySQL)
+
+1. **Start MySQL** and open **phpMyAdmin** (`http://localhost/phpmyadmin`).
+2. **Create the database** manually or execute the provided script:
+   - Import the SQL file located in `3.SQL/DanielGarcia_ReserveCut_MPD_DataBase.sql`.
+   - Alternatively, in MySQL, run:
+     ```sql
+     SOURCE path/to//DanielGarcia_ReserveCut_MPD_DataBase.sql;
+     ```
+   - Make sure the database name matches the one in your Laravel `.env` file
 
 ### Backend (Laravel)
 
