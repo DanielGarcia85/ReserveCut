@@ -4,10 +4,11 @@
 
 ## Features
 
-- **Appointment scheduling**: Plan and manage customer bookings.
-- **Customer management**: Track customer details and preferences.
-- **Service management**: Catalog of available services with pricing.
-- **User-friendly interface**: Frontend developed in C# for a smooth user experience.
+- 📅 Appointment Management : Schedule, modify, and cancel reservations.
+- 👤 Customer Database : Store client details and preferences.
+- 💇 Haircut & Service Catalog : List available haircuts, pricing, and specifications.
+- ✂️ Barber & Specialization Management : Assign barbers based on expertise.
+- 🔐 User Role & Access Management – Different user roles with access control for managing reservations, customers, and services.
 
 ## Project Structure
 
