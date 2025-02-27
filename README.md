@@ -13,12 +13,12 @@
 
 The project is organized into several folders, reflecting the different development stages:
 
-1. **0.Rendu/** : Contains the five milestones submitted to the professor:
-   - **1.Flyer/** : Initial idea presented as a promotional flyer.
-   - **2.Logo_Image/** : Logos and images associated with the project.
-   - **3.SQL/** : Database modeling and SQL scripts.
-   - **4.VisualStudio/** : Horizontal prototype developed in Visual Studio, containing all application windows.
-   - **5.Laravel/** : Fully developed backend in PHP using the Laravel framework.
+- **0.Rendu/** : Contains the five milestones submitted to the professor:
+- **1.Flyer/** : Initial idea presented as a promotional flyer.
+- **2.Logo_Image/** : Logos and images associated with the project.
+- **3.SQL/** : Database modeling and SQL scripts.
+- **4.VisualStudio/** : Horizontal prototype developed in Visual Studio, containing all application windows.
+- **5.Laravel/** : Fully developed backend in PHP using the Laravel framework.
 
 ## Prerequisites
 
