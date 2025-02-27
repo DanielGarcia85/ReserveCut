@@ -24,11 +24,11 @@ The project is organized into several folders, reflecting the different developm
 
 Before starting, ensure you have installed:
 
-- **PHP 7.4 or later**: [Download here](https://www.php.net/downloads)
+- **PHP 8.2 or later**: [Download here](https://www.php.net/downloads)
 - **Composer**: [Download here](https://getcomposer.org/download/)
 - **Laravel 8.x**: [Installation guide](https://laravel.com/docs/8.x/installation)
 - **Visual Studio 2022**: [Download here](https://visualstudio.microsoft.com/downloads/)
-- **.NET Framework 4.7.2 or later**: [Download here](https://dotnet.microsoft.com/download/dotnet-framework)
+- **.NET Framework 7.0.102 or later**: [Download here](https://dotnet.microsoft.com/download/dotnet-framework)
 
 ## Installation
 
@@ -38,3 +38,4 @@ Before starting, ensure you have installed:
    ```bash
    git clone https://github.com/DanielGarcia85/ReserveCut.git
    cd ReserveCut/5.Laravel
+   ```
