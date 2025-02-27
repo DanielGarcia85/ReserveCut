@@ -1,0 +1,40 @@
+# ReserveCut
+
+**ReserveCut** is a reservation and management application designed for hair salons, developed as part of the *62-41 Architecture* course at **Haute École de Gestion (HEG)**. This project combines a robust **PHP** backend built with **Laravel** and an interactive **C#** frontend developed in **Visual Studio**.
+
+## Features
+
+- **Appointment scheduling**: Plan and manage customer bookings.
+- **Customer management**: Track customer details and preferences.
+- **Service management**: Catalog of available services with pricing.
+- **User-friendly interface**: Frontend developed in C# for a smooth user experience.
+
+## Project Structure
+
+The project is organized into several folders, reflecting the different development stages:
+
+1. **0.Rendu/** : Contains the five milestones submitted to the professor:
+   - **1.Flyer/** : Initial idea presented as a promotional flyer.
+   - **2.Logo_Image/** : Logos and images associated with the project.
+   - **3.SQL/** : Database modeling and SQL scripts.
+   - **4.VisualStudio/** : Horizontal prototype developed in Visual Studio, containing all application windows.
+   - **5.Laravel/** : Fully developed backend in PHP using the Laravel framework.
+
+## Prerequisites
+
+Before starting, ensure you have installed:
+
+- **PHP 7.4 or later**: [Download here](https://www.php.net/downloads)
+- **Composer**: [Download here](https://getcomposer.org/download/)
+- **Laravel 8.x**: [Installation guide](https://laravel.com/docs/8.x/installation)
+- **Visual Studio 2019 or later**: [Download here](https://visualstudio.microsoft.com/downloads/)
+- **.NET Framework 4.7.2 or later**: [Download here](https://dotnet.microsoft.com/download/dotnet-framework)
+
+## Installation
+
+### Backend (Laravel)
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/DanielGarcia85/ReserveCut.git
+   cd ReserveCut/5.Laravel
