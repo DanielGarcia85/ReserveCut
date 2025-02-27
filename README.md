@@ -37,7 +37,7 @@ Before starting, ensure you have installed:
 1. **Clone the repository**:
    ```shell
    git clone https://github.com/DanielGarcia85/ReserveCut.git
-   cd ReserveCut/5.Laravel
+   cd ReserveCut/5.Laravel/reserveCut
    ```
 2. **Install depenencies**:
    ```shell
