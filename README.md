@@ -27,7 +27,7 @@ Before starting, ensure you have installed:
 - **PHP 7.4 or later**: [Download here](https://www.php.net/downloads)
 - **Composer**: [Download here](https://getcomposer.org/download/)
 - **Laravel 8.x**: [Installation guide](https://laravel.com/docs/8.x/installation)
-- **Visual Studio 2019 or later**: [Download here](https://visualstudio.microsoft.com/downloads/)
+- **Visual Studio 2022**: [Download here](https://visualstudio.microsoft.com/downloads/)
 - **.NET Framework 4.7.2 or later**: [Download here](https://dotnet.microsoft.com/download/dotnet-framework)
 
 ## Installation
