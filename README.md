@@ -35,7 +35,32 @@ Before starting, ensure you have installed:
 ### Backend (Laravel)
 
 1. **Clone the repository**:
-   ```bash
+   ```shell
    git clone https://github.com/DanielGarcia85/ReserveCut.git
    cd ReserveCut/5.Laravel
    ```
+2. **Install depenencies**:
+   ```shell
+   composer install
+   ```
+3. Set up environnement
+   - Copy the .env.example file to .env
+   ```shell
+   cp .env.example .env
+   ```
+   - Generate the application key:
+   ```shell
+   php artisan key:generate
+   ```
+   - Configure database settings in the .env file.
+4. Migrate the database
+   ```shell
+   php artisan migrate
+   ```
+5. Start the development server
+   ```shell
+   php artisan serve
+   ```
+
+### Frontend (Visual Studio)
+
