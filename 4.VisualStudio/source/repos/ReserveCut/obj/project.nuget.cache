@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nxDO5GP4hwsLs/RjoaE/00e3KxmTSx80xqgPndnhCgjp0OzPlcjeHSdIggZVgtU1gnvg7igLnyCecfazRotgsg==",
+  "dgSpecHash": "hV8l+1RU/H+I/Xj/NrtQYWhElrl3LL/2lC8Pry0OIDBMzzC5yxWZSt4IaCC6zzR2AtU7Fs4RDonxXwgjEv5OQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\ReserveCut.csproj",
+  "projectFilePath": "C:\\Users\\garciad\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\ReserveCut.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Daniel\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\garciad\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

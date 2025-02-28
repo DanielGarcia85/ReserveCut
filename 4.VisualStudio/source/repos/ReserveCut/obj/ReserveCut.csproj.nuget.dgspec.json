@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\ReserveCut.csproj": {}
+    "C:\\Users\\garciad\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\ReserveCut.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\ReserveCut.csproj": {
+    "C:\\Users\\garciad\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\ReserveCut.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\ReserveCut.csproj",
+        "projectUniqueName": "C:\\Users\\garciad\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\ReserveCut.csproj",
         "projectName": "ReserveCut",
-        "projectPath": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\ReserveCut.csproj",
-        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\obj\\",
+        "projectPath": "C:\\Users\\garciad\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\ReserveCut.csproj",
+        "packagesPath": "C:\\Users\\garciad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\garciad\\OneDrive\\#D@niel#\\#_HEG\\Semestre_4\\62-41_Architecture\\Projet_ReserveCut\\4.VisualStudio\\source\\repos\\ReserveCut\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\garciad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
