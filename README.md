@@ -104,7 +104,7 @@ Since the project is not yet fully completed, there is currently no standalone e
 - .NET Framework Documentation: [Download here](https://docs.microsoft.com/en-us/dotnet/framework/)
 
 ## License
-This project is licensed under the **Creative Commons Attribution-ShareAlike (CC BY-SA)** license.
+This project is licensed under the *Creative Commons Attribution-ShareAlike (CC BY-SA)* license.
 
 ### Author
 Project created by **Daniel Garcia** as part of the ***62-41 Architecture*** course at **Haute École de Gestion (HEG)** during the Spring semester of 2024.
