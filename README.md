@@ -99,9 +99,9 @@ Since the project is not yet fully completed, there is currently no standalone e
 
 ### Useful Resources
 
-- Laravel Documentation: [Download here](https://laravel.com/docs/8.x)
-- Visual Studio Documentation: [Download here](https://docs.microsoft.com/en-us/visualstudio/)
-- .NET Framework Documentation: [Download here](https://docs.microsoft.com/en-us/dotnet/framework/)
+- Laravel Documentation: https://laravel.com/docs/8.x
+- Visual Studio Documentation: https://docs.microsoft.com/en-us/visualstudio/
+- .NET Framework Documentation: https://docs.microsoft.com/en-us/dotnet/framework/
 
 ## License
 This project is licensed under the *Creative Commons Attribution-ShareAlike (CC BY-SA)* license.
